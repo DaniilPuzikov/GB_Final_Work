@@ -1,0 +1,526 @@
+daniil@daniil-VirtualBox:~$ ls
+ docker-compose.yml   snap        Загрузки      Общедоступные
+ Dockerfile           Видео       Изображения  'Рабочий стол'
+ myfolder             Документы   Музыка        Шаблоны
+daniil@daniil-VirtualBox:~$ history
+    1  ls
+    2  history
+daniil@daniil-VirtualBox:~$ nano Pets
+daniil@daniil-VirtualBox:~$ cat Pets
+cat: Pets: Нет такого файла или каталога
+daniil@daniil-VirtualBox:~$ nano Pets
+daniil@daniil-VirtualBox:~$ cat Pets
+Hamsters
+Cats
+Dogs
+daniil@daniil-VirtualBox:~$ nano Pack_animals
+daniil@daniil-VirtualBox:~$ cat Pack_animals
+Horses
+Donkeys
+Camels
+daniil@daniil-VirtualBox:~$ cat Pets Pack_animals > Friends_of_human
+daniil@daniil-VirtualBox:~$ ls
+ docker-compose.yml   myfolder       snap        Загрузки      Общедоступные
+ Dockerfile           Pack_animals   Видео       Изображения  'Рабочий стол'
+ Friends_of_human     Pets           Документы   Музыка        Шаблоны
+daniil@daniil-VirtualBox:~$ cat Friends_of_human
+Hamsters
+Cats
+Dogs
+Horses
+Donkeys
+Camels
+daniil@daniil-VirtualBox:~$ mkdir animals
+daniil@daniil-VirtualBox:~$ ls
+ animals              myfolder       Видео         Музыка
+ docker-compose.yml   Pack_animals   Документы     Общедоступные
+ Dockerfile           Pets           Загрузки     'Рабочий стол'
+ Friends_of_human     snap           Изображения   Шаблоны
+daniil@daniil-VirtualBox:~$ mv Pets animals
+daniil@daniil-VirtualBox:~$ mv Pack_animals animals
+daniil@daniil-VirtualBox:~$ mv Friends_of_human animals
+daniil@daniil-VirtualBox:~$ ls
+ animals              myfolder   Документы     Музыка          Шаблоны
+ docker-compose.yml   snap       Загрузки      Общедоступные
+ Dockerfile           Видео      Изображения  'Рабочий стол'
+daniil@daniil-VirtualBox:~$ cd animals
+daniil@daniil-VirtualBox:~/animals$ ls
+Friends_of_human  Pack_animals  Pets
+daniil@daniil-VirtualBox:~/animals$ whatis wget
+wget (1)             - The non-interactive network downloader.
+daniil@daniil-VirtualBox:~/animals$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+--2024-01-06 09:02:40--  https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+Распознаётся dev.mysql.com (dev.mysql.com)… 104.66.124.6, 2a02:26f0:41:691::2e31, 2a02:26f0:41:694::2e31
+Подключение к dev.mysql.com (dev.mysql.com)|104.66.124.6|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 302 Moved Temporarily
+Адрес: https://repo.mysql.com//mysql-apt-config_0.8.24-1_all.deb [переход]
+--2024-01-06 09:02:40--  https://repo.mysql.com//mysql-apt-config_0.8.24-1_all.deb
+Распознаётся repo.mysql.com (repo.mysql.com)… 23.210.173.94, 2a02:26f0:9500:b8a::1d68, 2a02:26f0:9500:b83::1d68
+Подключение к repo.mysql.com (repo.mysql.com)|23.210.173.94|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 18048 (18K) [application/x-debian-package]
+Сохранение в: ‘mysql-apt-config_0.8.24-1_all.deb’
+
+mysql-apt-config_0. 100%[===================>]  17,62K  --.-KB/s    за 0s      
+
+2024-01-06 09:02:41 (116 MB/s) - ‘mysql-apt-config_0.8.24-1_all.deb’ сохранён [18048/18048]
+
+daniil@daniil-VirtualBox:~/animals$ cd ~
+daniil@daniil-VirtualBox:~$ ls
+ animals              myfolder   Документы     Музыка          Шаблоны
+ docker-compose.yml   snap       Загрузки      Общедоступные
+ Dockerfile           Видео      Изображения  'Рабочий стол'
+daniil@daniil-VirtualBox:~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+[sudo] пароль для daniil: 
+dpkg: ошибка: нет доступа к архиву «mysql-apt-config_0.8.24-1_all.deb»: Нет такого файла или каталога
+daniil@daniil-VirtualBox:~$ sudo dpkg -i dev.mysql-apt-config_0.8.24-1_all.deb
+dpkg: ошибка: нет доступа к архиву «dev.mysql-apt-config_0.8.24-1_all.deb»: Нет такого файла или каталога
+daniil@daniil-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Пол:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]      
+Пол:4 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+Пол:5 http://ru.archive.ubuntu.com/ubuntu
+m/ubuntu j
+/ubuntu jammy-up
+my-updates/main i386 Packages [548 kB]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1?268 kB]
+Пол:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1?056 kB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [260 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1?257 kB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [205 kB]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1?021 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [677 kB]
+Пол:13 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [227 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [41,7 kB]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main i386 Packages [33,9 kB]
+Пол:16 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [24,3 kB]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [13,4 kB]
+Пол:18 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [384 kB]
+Пол:19 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [200 kB]
+Пол:20 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1?233 kB]
+Пол:21 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [202 kB]
+Пол:22 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [824 kB]
+Пол:23 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [582 kB]
+Пол:24 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [156 kB]
+Получено 10,6 MB за 14с (754 kB/s)                                             
+^[[A^[[A^[[A
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 169 пакетов. Запустите «apt list --upgradable» для их показа.
+daniil@daniil-VirtualBox:~$ sudo dpkg -i dev.mysql-apt-config_0.8.24-1_all.deb
+dpkg: ошибка: нет доступа к архиву «dev.mysql-apt-config_0.8.24-1_all.deb»: Нет такого файла или каталога
+daniil@daniil-VirtualBox:~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+dpkg: ошибка: нет доступа к архиву «mysql-apt-config_0.8.24-1_all.deb»: Нет такого файла или каталога
+daniil@daniil-VirtualBox:~$ sudo apt install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Будут установлены следующие дополнительные пакеты:
+  libaio1 libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7
+  libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl
+  libhtml-template-perl libmecab2 libprotobuf-lite23 mecab-ipadic
+  mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0
+  mysql-common mysql-server-8.0 mysql-server-core-8.0
+Предлагаемые пакеты:
+  libipc-sharedcache-perl mailx tinyca
+Следующие НОВЫЕ пакеты будут установлены:
+  libaio1 libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7
+  libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl
+  libhtml-template-perl libmecab2 libprotobuf-lite23 mecab-ipadic
+  mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0
+  mysql-common mysql-server mysql-server-8.0 mysql-server-core-8.0
+Обновлено 0 пакетов, установлено 20 новых пакетов, для удаления отмечено 0 пакетов, и 169 пакетов не обновлено.
+Необходимо скачать 29,3 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 242 MB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mysql-common all 5.8+1.0.8 [7?212 B]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-core-8.0 amd64 8.0.35-0ubuntu0.22.04.1 [2?682 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-8.0 amd64 8.0.35-0ubuntu0.22.04.1 [22,7 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libaio1 amd64 0.3.112-13build1 [7?176 B]
+Пол:5 http://ru.archive.ub
+untu.com/ubuntu jammy/main amd64 libevent-core-2.1-7 amd64 2.1.12-stable-1build3 [93,9 kB]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libevent-pthreads-2.1-7 amd64 2.1.12-stable-1build3 [7?642 B]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libmecab2 amd64 0.996-14build9 [199 kB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libprotobuf-lite23 amd64 3.12.4-1ubuntu7.22.04.1 [209 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server-core-8.0 amd64 8.0.35-0ubuntu0.22.04.1 [17,6 MB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server-8.0 amd64 8.0.35-0ubuntu0.22.04.1 [1?438 kB]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libcgi-pm-perl all 4.54-1 [188 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libfcgi0ldbl amd64 2.4.2-2build2 [28,0 kB]
+Пол:13 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libfcgi-perl amd64 0.82+ds-1build1 [22,8 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libcgi-fast-perl all 1:2.15-1 [10,5 kB]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libfcgi-bin amd64 2.4.2-2build2 [11,2 kB]
+Пол:16 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libhtml-template-perl all 2.97-1.1 [59,1 kB]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-utils amd64 0.996-14build9 [4?850 B]
+Пол:18 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-ipadic all 2.7.0-20070801+main-3 [6?718 kB]
+Пол:19 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4?384 B]
+Пол:20 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server all 8.0.35-0ubuntu0.22.04.1 [9?464 B]
+Получено 29,3 MB за 13с (2?202 kB/s)                                           
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета mysql-common.
+(Чтение базы данных … на данный момент установлено 180805 файлов и каталогов.)
+Подготовка к распаковке …/0-mysql-common_5.8+1.0.8_all.deb …
+Распаковывается mysql-common (5.8+1.0.8) …
+Выбор ранее не выбранного пакета mysql-client-core-8.0.
+Подготовка к распаковке …/1-mysql-client-core-8.0_8.0.35-0ubuntu0.22.04.1_amd64.
+deb …
+Распаковывается mysql-client-core-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Выбор ранее не выбранного пакета mysql-client-8.0.
+Подготовка к распаковке …/2-mysql-client-8.0_8.0.35-0ubuntu0.22.04.1_amd64.deb …
+Распаковывается mysql-client-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Выбор ранее не выбранного пакета libaio1:amd64.
+Подготовка к распаковке …/3-libaio1_0.3.112-13build1_amd64.deb …
+Распаковывается libaio1:amd64 (0.3.112-13build1) …
+Выбор ранее не выбранного пакета libevent-core-2.1-7:amd64.
+Подготовка к распаковке …/4-libevent-core-2.1-7_2.1.12-stable-1build3_amd64.deb 
+…
+Распаковывается libevent-core-2.1-7:amd64 (2.1.12-stable-1build3) …
+Выбор ранее не выбранного пакета libevent-pthreads-2.1-7:amd64.
+Подготовка к распаковке …/5-libevent-pthreads-2.1-7_2.1.12-stable-1build3_amd64.
+deb …
+Распаковывается libevent-pthreads-2.1-7:amd64 (2.1.12-stable-1build3) …
+Выбор ранее не выбранного пакета libmecab2:amd64.
+Подготовка к распаковке …/6-libmecab2_0.996-14build9_amd64.deb …
+Распаковывается libmecab2:amd64 (0.996-14build9) …
+Выбор ранее не выбранного пакета libprotobuf-lite23:amd64.
+Подготовка к распаковке …/7-libprotobuf-lite23_3.12.4-1ubuntu7.22.04.1_amd64.deb
+ …
+Распаковывается libprotobuf-lite23:amd64 (3.12.4-1ubuntu7.22.04.1) …
+Выбор ранее не выбранного пакета mysql-server-core-8.0.
+Подготовка к распаковке …/8-mysql-server-core-8.0_8.0.35-0ubuntu0.22.04.1_amd64.
+deb …
+Распаковывается mysql-server-core-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет mysql-common (5.8+1.0.8) …
+update-alternatives: используется /etc/mysql/my.cnf.fallback для предоставления 
+/etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Выбор ранее не выбранного пакета mysql-server-8.0.
+(Чтение базы данных … на данный момент установлено 181029 файлов и каталогов.)
+Подготовка к распаковке …/00-mysql-server-8.0_8.0.35-0ubuntu0.22.04.1_amd64.deb 
+…
+Распаковывается
+d64.deb 
+…
+Распаковывается mysql-se
+ql-server-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Выбор ранее не выбранного пакета libcgi-pm-perl.
+Подготовка к распаковке …/01-libcgi-pm-perl_4.54-1_all.deb …
+Распаковывается libcgi-pm-perl (4.54-1) …
+Выбор ранее не выбранного пакета libfcgi0ldbl:amd64.
+Подготовка к распаковке …/02-libfcgi0ldbl_2.4.2-2build2_amd64.deb …
+Распаковывается libfcgi0ldbl:amd64 (2.4.2-2build2) …
+Выбор ранее не выбранного пакета libfcgi-perl:amd64.
+Подготовка к распаковке …/03-libfcgi-perl_0.82+ds-1build1_amd64.deb …
+Распаковывается libfcgi-perl:amd64 (0.82+ds-1build1) …
+Выбор ранее не выбранного пакета libcgi-fast-perl.
+Подготовка к распаковке …/04-libcgi-fast-perl_1%3a2.15-1_all.deb …
+Распаковывается libcgi-fast-perl (1:2.15-1) …
+Выбор ранее не выбранного пакета libfcgi-bin.
+Подготовка к распаковке …/05-libfcgi-bin_2.4.2-2build2_amd64.deb …
+Распаковывается libfcgi-bin (2.4.2-2build2) …
+Выбор ранее не выбранного пакета libhtml-template-perl.
+Подготовка к распаковке …/06-libhtml-template-perl_2.97-1.1_all.deb …
+Распаковывается libhtml-template-perl (2.97-1.1) …
+Выбор ранее не выбранного пакета mecab-utils.
+Подготовка к распаковке …/07-mecab-utils_0.996-14build9_amd64.deb …
+Распаковывается mecab-utils (0.996-14build9) …
+Выбор ранее не выбранного пакета mecab-ipadic.
+Подготовка к распаковке …/08-mecab-ipadic_2.7.0-20070801+main-3_all.deb …
+Распаковывается mecab-ipadic (2.7.0-20070801+main-3) …
+Выбор ранее не выбранного пакета mecab-ipadic-utf8.
+Подготовка к распаковке …/09-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb …
+Распаковывается mecab-ipadic-utf8 (2.7.0-20070801+main-3) …
+Выбор ранее не выбранного пакета mysql-server.
+Подготовка к распаковке …/10-mysql-server_8.0.35-0ubuntu0.22.04.1_all.deb …
+Распаковывается mysql-server (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет libmecab2:amd64 (0.996-14build9) …
+Настраивается пакет mysql-client-core-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет libfcgi0ldbl:amd64 (2.4.2-2build2) …
+Настраивается пакет libcgi-pm-perl (4.54-1) …
+Настраивается пакет libfcgi-bin (2.4.2-2build2) …
+Настраивается пакет libhtml-template-perl (2.97-1.1) …
+Настраивается пакет libprotobuf-lite23:amd64 (3.12.4-1ubuntu7.22.04.1) …
+Настраивается пакет mecab-utils (0.996-14build9) …
+Настраивается пакет libevent-core-2.1-7:amd64 (2.1.12-stable-1build3) …
+Настраивается пакет mysql-client-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет libfcgi-perl:amd64 (0.82+ds-1build1) …
+Настраивается пакет libaio1:amd64 (0.3.112-13build1) …
+Настраивается пакет libevent-pthreads-2.1-7:amd64 (2.1.12-stable-1build3) …
+Настраивается пакет mecab-ipadic (2.7.0-20070801+main-3) …
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adnominal.
+csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic для предоставления /
+var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом режиме
+Настраивается пакет libcgi-fast-perl (1:2.15-1) …
+Настраивается пакет mysql-server-core-8.0 (8.0.35-0ubuntu0.22.04.1) …
+Настраивается пакет mecab-ipadic-utf8 (2.7.0-20070801+main-3) …
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic-utf8 для предоставле
+ния /var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом режиме
+Настраивается пакет mysql-server-8.0 (8.0.35-0ubuntu0.22.04.1) …
+update-alternatives: используется /etc/mysql/mysql.cnf для предоставления /etc/m
+ysql/my.cnf (my.cnf) в автоматическом режиме
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 3980
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service > /lib
+/systemd/system/mysql.service.
+Настраивается пакет mysql-server (8.0.35-0ubuntu0.22.04.1) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для libc-bin (2.35-0ubuntu3.1) …
+daniil@daniil-VirtualBox:~$ dpkg --help
+Использование: dpkg [<параметр>…] <команда>
+
+Команды:
+  -i|--install      <имя файла .deb>… | -R|--recursive <каталог>…
+  --unpack          <имя файла .deb>… | -R|--recursive <каталог>…
+  -A|--record-avail <имя файла .deb>… | -R|--recursive <каталог>…
+  --configure       <имя пакета>… | -a|--pending
+  --triggers-only   <имя пакета>… | -a|--pending
+  -r|--remove       <имя пакета>… | -a|--pending
+  -P|--purge        <имя пакета>… | -a|--pending
+  -V|--verify [<имя пакета>…]       Проверить целостность пакета(ов)
+-
+--get-selections [<шаблон>…]      Вывести список в стандартный поток
+                                    вывода список выбранных пакетов
+  --set-selections                  Выбрать пакеты в соответствии со
+                                    списком из стандартного потока ввода
+  --clear-selections                Отменить выбор всех пакетов
+                                    первой необходимости
+  --update-avail [<файл Packages>]  Заменить информацию о доступных
+                                    пакетах содержимым файла
+  --merge-avail [<файл Packages>]   Объединить информацию о доступных
+                                    пакетах с содержимым файла
+  --clear-avail                     Удалить информацию о доступных пакетах
+  --forget-old-unavail              Удалить информацию о неустановленных
+                                    недоступных пакетах
+  -s|--status [<имя пакета>…]       Вывести информацию о состоянии пакета
+  -p|--print-avail [<имя пакета>…]  Вывести информацию о доступной
+                                    версии пакета
+  -L|--listfiles <имя пакета>…      Перечислить файлы, принадлежащие
+                                      пакету(ам)
+  -l|--list [<шаблон>…]             Кратко перечислить пакеты
+  -S|--search <шаблон>…             Найти пакет(ы), которому(ым)
+                                    принадлежит(ат) файл(ы)
+  -C|--audit [<имя пакета>…]        Проверить наличие сломанных пакетов
+  --yet-to-unpack                   Вывести пакеты, выбранные для установки
+  --predep-package                  Вывести предв. распаковываемые зависимости
+  --add-architecture <архит>        Добавить <архитектуру> в список
+                                    архитектур
+  --remove-architecture <архит>     Удалить <архитектуру> из списка
+                                    архитектур
+  --print-architecture              Вывести архитектуру dpkg
+  --print-foreign-architectures     Вывести разрешённые неродные архитектуры
+  --assert-help                     Показать справку о контроле.
+  --assert-<свойство>               Контролировать поддержку заданного свойства
+  --validate-<что-то> <строка>      Проверять, что <что-то> равно <строке>
+  --compare-versions <a> <op> <b>   Сравнить номера версий, см. ниже
+  --force-help                      Вывести справку по командам игнорирования
+  -Dh|--debug=help                  Вывести справку по командам отладки
+
+  -?, --help                          Вывести это сообщение
+  --version                           Вывести номер версии
+
+Проверяемые вещи: pkgname, archname, trigname, version.
+
+К архивам применяются команды: -b, --build, -c, --contents, -e, --control, -I, --info,
+  -f, --field, -x, --extract, -X, --vextract, --ctrl-tarfile, --fsys-tarfile
+(см. dpkg-deb --help).
+
+Options:
+  --admindir=<directory>     Use <directory> instead of /var/lib/dpkg.
+  --root=<directory>         Install on a different root directory.
+  --instdir=<directory>      Change installation dir without changing admin dir.
+  --pre-invoke=<command>     Set a pre-invoke hook.
+  --post-invoke=<command>    Set a post-invoke hook.
+  --path-exclude=<pattern>   Do not install paths which match a shell pattern.
+  --path-include=<pattern>   Re-include a pattern after a previous exclusion.
+  -O|--selected-only         Skip packages not selected for install/upgrade.
+  -E|--skip-same-version     Skip packages whose same version is installed.
+  -G|--refuse-downgrade      Skip packages with earlier version than installed.
+  -B|--auto-deconfigure      Install even if it would break some other package.
+  --[no-]triggers            Skip or force consequential trigger processing.
+  --verify-format=<format>   Verify output format (supported: 'rpm').
+  --no-pager                 Disables the use of any pager.
+  --no-debsig                Do not try to verify package signatures.
+  --no-act|--dry-run|--simulate
+                             Just say what we would do - don't do it.
+  -D|--debug=<octal>         Enable debugging (see -Dhelp or --debug=help).
+  --status-fd <n>            Send status change updates to file descripto
+r <n>.
+  --status-logger=<command>  Send status change updates to <command>'s stdin.
+  --log=<filename>           Log status changes and actions to <filename>.
+  --ignore-depends=<package>[,...]
+                             Ignore dependencies involving <package>.
+  --force-<thing>[,...]      Override problems (see --force-help).
+  --no-force-<thing>[,...]   Stop when problems encountered.
+  --refuse-<thing>[,...]     Ditto.
+  --abort-after <n>          Abort after encountering <n> errors.
+  --robot                    Use machine-readable output on some commands.
+
+Операторы сравнения, возможные в --compare-versions:
+  lt le eq ne ge gt       (пустое значение версии считать самой ранней);
+  lt-nl le-nl ge-nl gt-nl (пустое значение версии считать самой поздней);
+  < << <= = >= >> >       (для совместимости с синтаксисом файла control).
+
+Программы «apt» или «aptitude» предоставляют дружественный интерфейс
+управления пакетами.
+daniil@daniil-VirtualBox:~$ sudo dpkg mysql-server -P
+dpkg: ошибка: укажите требуемое действие
+
+Справка по установке и удалению пакетов доступна по команде dpkg --help [*];
+Программа «apt» или «aptitude» предоставляет дружественный интерфейс
+управления пакетами;
+Чтобы получить список значений флагов отладки dpkg, введите dpkg -Dhelp;
+Чтобы получить информацию об игнорировании проблем, введите dpkg --force-help;
+Чтобы получить справку по работе с файлами *.deb, введите dpkg-deb --help;
+
+Команды, отмеченные [*], выводят большое количество информации.
+Объедините их в конвейер с программами «less» или «more»!
+daniil@daniil-VirtualBox:~$ sudo dpkg -i man-db_2.9.4-2_amd64.deb
+dpkg: ошибка: нет доступа к архиву «man-db_2.9.4-2_amd64.deb»: Нет такого файла или каталога
+daniil@daniil-VirtualBox:~$ sudo dpkg dev.mysql-apt-config_0.8.24-1_all.deb -r
+dpkg: ошибка: укажите требуемое действие
+
+Справка по установке и удалению пакетов доступна по команде dpkg --help [*];
+Программа «apt» или «aptitude» предоставляет дружественный интерфейс
+управления пакетами;
+Чтобы получить список значений флагов отладки dpkg, введите dpkg -Dhelp;
+Чтобы получить информацию об игнорировании проблем, введите dpkg --force-help;
+Чтобы получить справку по работе с файлами *.deb, введите dpkg-deb --help;
+
+Команды, отмеченные [*], выводят большое количество информации.
+Объедините их в конвейер с программами «less» или «more»!
+daniil@daniil-VirtualBox:~$ wget https://dev.mysql.com/get/mysql-connector-j_8.0.32-1ubuntu22.04_all.deb
+--2024-01-06 09:16:25--  https://dev.mysql.com/get/mysql-connector-j_8.0.32-1ubuntu22.04_all.deb
+Распознаётся dev.mysql.com (dev.mysql.com)… 104.66.124.6, 2a02:26f0:41:691::2e31, 2a02:26f0:41:694::2e31
+Подключение к dev.mysql.com (dev.mysql.com)|104.66.124.6|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 302 Moved Temporarily
+Адрес: https://cdn.mysql.com//archives/mysql-connector-java-8.0/mysql-connector-j_8.0.32-1ubuntu22.04_all.deb [переход]
+--2024-01-06 09:16:26--  https://cdn.mysql.com//archives/mysql-connector-java-8.0/mysql-connector-j_8.0.32-1ubuntu22.04_all.deb
+Распознаётся cdn.mysql.com (cdn.mysql.com)… 23.61.230.10, 2a02:26f0:41:681::1d68, 2a02:26f0:41:68e::1d68
+Подключение к cdn.mysql.com (cdn.mysql.com)|23.61.230.10|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 2429088 (2,3M) [application/x-debian-package]
+Сохранение в: ‘mysql-connector-j_8.0.32-1ubuntu22.04_all.deb’
+
+mysql-connector-j_8 100%[===================>]   2,32M  2,19MB/s    за 1,1s    
+
+2024-01-06 09:16:27 (2,19 MB/s) - ‘mysql-connector-j_8.0.32-1ubuntu22.04_all.deb’ сохранён [2429088/2429088]
+
+daniil@daniil-VirtualBox:~$ sudo dpkg -i mysql-connector-j_8.0.32-1ubuntu22.04_all.deb
+Выбор ранее не выбранного пакета mysql-connector-j.
+(Чтение базы данных … на данный момент установлено 181196 файлов и каталогов.)
+Подготовка к распаковке mysql-connector-j_8.0.32-1ubuntu22.04_all.deb …
+Распаковывается mysql-connector-j (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-connector-j (8.0.32-1ubuntu22.04) …
+daniil@daniil-VirtualBox:~$ sudo dpkg -P mysql-connector-j
+(Чтение базы данных … на
+данный момент установлено 181205 файлов и каталогов.)
+Удаляется mysql-connector-j (8.0.32-1ubuntu22.04) …
+daniil@daniil-VirtualBox:~$ history
+    1  ls
+    2  history
+    3  nano Pets
+    4  cat Pets
+    5  nano Pets
+    6  cat Pets
+    7  nano Pack_animals
+    8  cat Pack_animals
+    9  cat Pets Pack_animals > Friends_of_human
+   10  ls
+   11  cat Friends_of_human
+   12  mkdir animals
+   13  ls
+   14  mv Pets animals
+   15  mv Pack_animals animals
+   16  mv Friends_of_human animals
+   17  ls
+   18  cd animals
+   19  ls
+   20  whatis wget
+   21* dpkg 
+   22  cd ~
+   23  ls
+   24  sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+   25  sudo dpkg -i dev.mysql-apt-config_0.8.24-1_all.deb
+   26  sudo apt update
+   27  sudo dpkg -i dev.mysql-apt-config_0.8.24-1_all.deb
+   28  sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+   29  sudo apt install mysql-server
+   30  dpkg --help
+   31  sudo dpkg mysql-server -P
+   32  sudo dpkg -i man-db_2.9.4-2_amd64.deb
+   33  sudo dpkg dev.mysql-apt-config_0.8.24-1_all.deb -r
+   34  wget https://dev.mysql.com/get/mysql-connector-j_8.0.32-1ubuntu22.04_all.deb
+   35  sudo dpkg -i mysql-connector-j_8.0.32-1ubuntu22.04_all.deb
+   36  sudo dpkg -P mysql-connector-j
+   37  history
